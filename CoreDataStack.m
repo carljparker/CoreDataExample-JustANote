@@ -82,6 +82,8 @@
 /// returns url to file `~/<your serach path directory>/<your reverse told app identifier>/<your data file name with extension>`
 -(NSURL*)dataFileURL
 {
+    NSLog(@"%@", [self applicationDocumentsDirectory].absoluteString);
+    
     return [[self applicationDocumentsDirectory] URLByAppendingPathComponent:[self dataFileNameWithExtension]];
 }
 
